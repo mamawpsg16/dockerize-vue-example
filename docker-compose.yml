@@ -1,20 +1,20 @@
-# services:
-#   vue-app:
-#     build:
-#       context: ./node
-#       dockerfile: Dockerfile.dev
-#     container_name: vue-app
-#     ports:
-#       - '5173:5173'
-#     volumes:
-#       - ./src:/app
-#       - /app/node_modules
-
 services:
   vue-app:
     build:
-      context: .
-      dockerfile: Dockerfile.prd
-    container_name: vue-app-production
+      context: ./node
+      dockerfile: Dockerfile.dev
+    container_name: vue-app
     ports:
-      - '81:80'
+      - '5173:5173'
+    volumes:
+      - ./src:/app
+      - /app/node_modules
+
+# services:
+#   vue-app:
+#     build:
+#       context: .
+#       dockerfile: Dockerfile.prd
+#     container_name: vue-app-production
+#     ports:
+#       - '81:80'

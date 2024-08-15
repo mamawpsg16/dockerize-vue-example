@@ -14,4 +14,4 @@ EXPOSE 5173
 
 
 # Start the development server
-CMD ["bash", "-c", "npm install && npm run build"]
+CMD ["bash", "-c", "npm install && npm run dev"]
